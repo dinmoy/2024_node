@@ -8,5 +8,9 @@ console.log(cathy)
 console.log(cathy.name)
 console.log(cathy["name"])
 
-delete cathy.skills
+//속성 추가
+cathy["취미"]="독서"
+
+//속성 제거
+delete cathy.취미
 console.log(cathy)
