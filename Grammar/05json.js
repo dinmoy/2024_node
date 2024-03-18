@@ -1,5 +1,6 @@
 const fs=require('fs')
-const path=require('path')
+const path=require('path');
+const { json } = require('stream/consumers');
 
 //json 파일 읽어오기
 fs.readFile(path.join(__dirname,'external_data.json')
@@ -14,5 +15,7 @@ fs.readFile(path.join(__dirname,'external_data.json')
                 const jsonObject = JSON.parse(data)
                 console.log(jsonObject)
 
-                a=1;
+                // object를 JSON 형태의 텍스트로
+                const jsonString=JSON.stringify(jsonObject)
+                console.log(jsonString)
             })
